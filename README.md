@@ -1,5 +1,5 @@
 # OpenCorpus
-A multilingual, open-source compendium of textual corpora across major world languages — curated for diversity, accessibility, and linguistic research. Includes links and metadata for publicly available, CC-licensed, and machine-readable datasets.
+A multilingual compilation of open-source textual corpora across major world languages - curated for accessibility and linguistic research. Includes links and metadata for publicly available, CC-licensed, and machine-readable datasets.
 
 We identify well‑curated public‑domain text collections that already include rich metadata or linguistic annotation.
 
