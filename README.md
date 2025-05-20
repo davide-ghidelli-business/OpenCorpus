@@ -76,6 +76,82 @@ Russian: The Leipzig Russian corpus (news/web; CC-BY) and Russian Wikipedia (CC-
 
 **Other Indo-European Languages**: For classical and less-common IE languages, open corpora exist: e.g. the Latin Library (latinlibrary.com) and Perseus Project provide extensive Latin/Greek texts (mostly PD). The OpenITI corpus offers open-access Persian and Arabic texts (incl. many medieval works; https://openiti.org/projects/OpenITI%20Corpus.html). UD treebanks cover dozens of languages (e.g. Old Norse, Welsh, Haitian, etc.) with POS/morphology annotations (CoNLL-U format; varying CC-BY/CC-BY-SA). These can seed lexicographic data where available.
 
+## Afro-Asiatic Languages
+
+**Arabic**: The Leipzig Arabic corpus (news/web; CC-BY) and Arabic Wikipedia (CC-BY-SA) are major open sources. In addition, OpenITI provides thousands of classical Arabic and Persian texts (liturgical and scholarly works; https://openiti.org/projects/OpenITI%20Corpus.html) – open-access and increasingly cleaned. The Quranic Arabic Corpus (grammar/lemmas) is annotated but carries a CC-BY-NC-SA license, so use primarily for reference (not included here). These corpora (especially wiki and news) cover modern MSA; classical texts enrich dictionary entries.
+
+| Corpus / Resource           | Language(s)     | Genres / Text Types                     | Annotation / Metadata   | Format     | License                  | Notes                                   |
+| --------------------------- | --------------- | --------------------------------------- | ----------------------- | ---------- | ------------------------ | --------------------------------------- |
+| [Leipzig Corpora (Arabic)](https://wortschatz.uni-leipzig.de/en/download) [[*](https://wortschatz.uni-leipzig.de/en/usage)]| Arabic          | News and web (10K–1M)                   | None                    | Plain text | CC-BY 4.0 [[*](https://wortschatz.uni-leipzig.de/en/usage)]            | Modern MSA usage, word co-occurrences.  |
+| [Wikipedia (Arabic)](https://en.wikipedia.org/wiki/Wikipedia:Database_download)          | Arabic          | Encyclopedic articles                   | None                    | XML dump   | CC-BY-SA 4.0 [[*](https://en.wikipedia.org/wiki/Wikipedia:Database_download)]         | General vocabulary, cross-domain.       |
+| [OpenITI (Arabic/Persian)](https://openiti.org/projects/OpenITI%20Corpus.html)    | Arabic; Persian | Classical religious/philosophical works | Metadata (author, date) | TEI/XML    | Open access (CC-BY-like) | Rich historical texts; some OCR errors. |
+
+**Hebrew**: Open resources include Hebrew Bible (Tanakh) texts (PD) and the Hebrew Wikipedia (CC-BY-SA). The Bar-Ilan Responsa Project is scholarly but not open. UD Hebrew corpora (modern liturgical and wiki) exist with annotations (UD format, CC-BY). These can support lexicographic work in modern and Biblical Hebrew.
+
+**Other Afro-Asiatic Languages**: For Amharic/Ge‘ez, no large open corpora are easily available. Somali Wikipedia and small Leipzig corpora may be used. In general, many Ethiopian languages rely on religious texts (often PD) and small parallel data.
+
+## Sino-Tibetan and East Asian Languages
+
+**Mandarin Chinese**: Open corpora include Leipzig Chinese (CC-BY) and Chinese Wikipedia (CC-BY-SA) for modern Chinese. Classical Chinese is available via the Chinese Text Project (ancient texts; open-access but CC-BY-NC-SA – not strictly CC-BY). Modern annotated treebanks exist (UD Chinese, POS-tagged), and the CC-CEDICT dictionary is open (for reference). These corpora serve both modern usage and classical study.
+
+| Corpus / Resource            | Language(s)        | Genres / Text Types   | Annotation / Metadata | Format     | License         | Notes                          |
+| ---------------------------- | ------------------ | --------------------- | --------------------- | ---------- | --------------- | ------------------------------ |
+| [Leipzig Corpora (Chinese)](https://wortschatz.uni-leipzig.de/en/download) [[*](https://wortschatz.uni-leipzig.de/en/usage)]| Chinese (Mandarin) | News and web (10K–1M) | None                  | Plain text | CC-BY 4.0 [[*](https://wortschatz.uni-leipzig.de/en/usage)]   | High-frequency modern Chinese. |
+| [Wikipedia (Chinese)](https://en.wikipedia.org/wiki/Wikipedia:Database_download)          | Chinese            | Encyclopedia articles | None                  | XML dump   | CC-BY-SA 4.0 [[*](https://en.wikipedia.org/wiki/Wikipedia:Database_download)]| Wide topical coverage.         |
+
+**Other Sino-Tibetan Languages**: For Burmese, Tibetan, etc., open data is sparse. Wikipedia exists for Burmese (CC-BY-SA) and smaller Wikipedias for Tibetan, plus some scholarly parallel texts (e.g. Buddhist Tripiṭaka translations). UD has limited treebanks for Tibetan. For major Chinese languages/dialects (e.g. Cantonese), Leipzig Corpora include some web data. These should be listed under a broader “multilingual” note if used.
+
+## Dravidian Languages
+
+**Tamil**: The Tamil Virtual Academy and Project Madurai (https://projectmadurai.org) provide PD Tamil literary works (epics, poems) in UTF-8 text. Tamil Wikipedia (CC-BY-SA) and Leipzig Tamil corpora (from news/web) also exist. UD Tamil is available (CC-BY-SA). These textual resources cover both classical and contemporary Tamil usage.
+
+**Other Dravidian Languages**: Malayalam, Telugu, Kannada have small Wikipedias and some UD treebanks. The Indian Language Corpora Initiative (ILCI) produced parallel corpora with open licensing (CC-BY) for Indian languages, useful for lexical entries.
+
+## Austro-Asiatic and Austronesian Languages
+
+**Vietnamese**: Leipzig Vietnamese (news/web; CC-BY) and Vietnamese Wikipedia (CC-BY-SA) are available. Vietnamese Parallel Corpora from OPUS (e.g. TED talks, Tatoeba) exist under CC licenses. These support modern language usage.
+
+**Thai**: Thai Wikipedia (CC-BY-SA) and National Electronics and Computer Technology Center (NECTEC) corpus (not fully open). Leipzig includes small Thai corpora. An OpenParallel corpus (e.g. Tatoeba sentences, CC-BY 4.0) can supplement.
+
+**Austronesian (Malay/Indonesian)**: Open corpora include Leipzig Indonesian/Malay and Wikipedia (MS, ID) under CC-BY-SA. The OSCAR web corpus and UD (e.g. Indonesian-GSD) are CC-BY-SA. These cover modern usage in Malay and Indonesian.
+
+## Uralic and Altaic Languages
+
+**Finnish/Hungarian**: The Leipzig Corpora include Finnish and Hungarian (CC-BY). Wikipedia (fi, hu) provide broad text. UD treebanks exist. These resources support standard lexical work in these languages. 
+
+**Turkish**: Leipzig Turkish and Wikipedia Turkish (CC-BY-SA) are open. The Turkish National Corpus is not open, but news archives (e.g. open news articles) and historical texts (forged citations) may be used. The UD Turkish treebank is CC-BY.
+
+**Other Altaic/Caucasian Languages**: Open corpora for Uzbek, Azerbaijani (Leipzig, Wikipedia) and Caucasian languages (e.g. Georgian Wikipedia) are limited but exist. Notably, open glossed corpora have been published for indigenous Siberian languages (Selkup, Nganasan, Kamas, Dolgan) with linguistic annotation (https://copius.univie.ac.at/). These specialized corpora (accessible via inel.corpora.uni-hamburg.de) are rare examples of endangered-language resources.
+
+## African Languages Languages
+
+**Swahili**: Swahili Wikipedia (CC-BY-SA) and Leipzig Swahili corpus (news; CC-BY) are key. The UD Swahili treebank (CC-BY) also exists. These support lexical analysis of modern Swahili.
+
+**Yoruba, Zulu, etc.**: Wikipedias exist (Yoruba, Zulu, etc., CC-BY-SA). Leipzig has some corpora (e.g. Yoruba). PanAfrican Parallel Corpora (Paracrawl) include news and the UDHR. These can provide base texts, though limited.
+
+**Other African Languages**: Many African languages lack large corpora. Parallel religious texts (Bible, UDHR) in local languages can offer seed data. Efforts like Masakhane (MT dataset) are promising but often custom-licensing (not CC-BY).
+
+## Americas
+
+**Global**: Wikipedia (Spanish, Portuguese, and English) cover major Colonial languages. Leipzig Corpora include Spanish, Portuguese (Brazilian) etc. Latin American historical texts (PD Spanish/Portuguese lit) and US/Canadian legal texts (PD) are available but not unified corpora.
+
+Indigenous Languages: UD provides treebanks for some (Quechua, Guarani, Nahuatl, Navajo, etc.) with CC-BY-SA. Small collections exist (e.g. collections of folk tales, bilingual corpora). The Universal Declaration of Human Rights in 500+ languages (UN translations) is PD and a handy parallel snippet for rare languages. Tools like Universal Dependencies (https://universaldependencies.org/) and Leipzig (https://wortschatz.uni-leipzig.de/en/download; https://wortschatz.uni-leipzig.de/en/usage) can be leveraged for others.
+
+## Multilingual Corpora
+
+Several resources span many languages:
+
+1. **Leipzig Corpora Collection**: Provides monolingual corpora (10K–1M sentences) for 100+ languages (including major and many minority languages; https://wortschatz.uni-leipzig.de/en/download). Texts are drawn from news and the web; formats are plain-text sentences. All downloads are CC-BY 4.0 (https://wortschatz.uni-leipzig.de/en/usage).
+2. **Wikipedia (dumps)**: >300 languages; encyclopedic articles (all licensed CC-BY-SA; https://en.wikipedia.org/wiki/Wikipedia:Database_download). It is a huge multilingual corpus (though quality varies).
+3. **Universal Dependencies (UD)**: Over 200 treebanks in 150+ languages (Indo-European, Uralic, Altaic, Sino-Tibetan, etc.; https://universaldependencies.org/), annotated for POS, morphology, and dependencies in CoNLL-U format. Licenses vary by treebank (mostly CC-BY or CC-BY-SA). UD provides structured, annotated data across families.
+4. **PubMed Central Open Access Subset (PMC OA)**: Millions of English biomedical articles (full text XML) under liberal (often CC-BY) licenses (https://pmc.ncbi.nlm.nih.gov/tools/openftlist/). This is an authoritative corpus of scientific prose, suitable for technical vocabulary.
+5. **Project Gutenberg & Wikisource (multilingual)**: Multi-language texts (many European classics in the public domain), usually plain text or ePub, virtually no restrictions (https://gutenberg.org/policy/license.html).
+6. **Parallel Bible Corpora**: While not strictly CC (e.g. JW300), Bible translations in hundreds of languages are broadly PD (e.g. King James, Septuagint) and can be used for basic lexicography in underserved languages.
+
+Most corpora are available in plain-text or XML formats and include at least basic metadata (author/date) when provided. They are suitable for building lexicons (word lists, frequency), etymological studies (via cross-language parallels), and semantic fields (through usage contexts). Priority should be given to sources cited above with open licenses (PD or CC-BY/CC-BY-SA) and minimal cleaning needs, ensuring authoritative coverage (classic literature, major newspapers, official documents) across linguistic families.
+
+**Sources**: Authoritative corpora and documentation for each language (as cited above) were used to compile this list (https://anc.org/, https://gutenberg.org/policy/license.html, https://en.wikipedia.org/wiki/Wikipedia:Database_download, https://wortschatz.uni-leipzig.de/en/download. https://wortschatz.uni-leipzig.de/en/usage, https://copius.univie.ac.at/, https://pmc.ncbi.nlm.nih.gov/tools/openftlist/), prioritizing open licenses and finished texts.
+
 <!--
 keywords: multilingual, NLP, open-source, natural-language-processing, research, resource, dictionaries, open, directory, corpus, linguistics, open-data, machine-readable
 -->
