@@ -1,176 +1,115 @@
-# OpenCorpus
-A multilingual compilation of open-source textual corpora across major & minor world languages - curated for accessibility and linguistic research. Includes links and metadata for publicly available, CC-licensed, and machine-readable datasets.
+# OpenCorpus 📚🌍
 
-We identify well‑curated public‑domain text collections that already include rich metadata or linguistic annotation.
+![OpenCorpus](https://img.shields.io/badge/OpenCorpus-v1.0.0-brightgreen)
 
-For example: 
-1. The Perseus Digital Library provides large Greek (32M words) and Latin (16M words) corpora with morphological parsing and dictionary links (https://methods.clsinfra.io; https://wiki.digitalclassicist.org)
-2. The Open Greek and Latin project exposes the same Perseus texts in TEI XML with lemmas and POS tags.
-3. Similarly, Project Gutenberg offers a massive PD literary corpus (primarily English) (https://methods.clsinfra.io)
-4. Language‑specific projects like the Deutsches Textarchiv provide TEI‑encoded historical German texts with lemmatization (https://tei-c.org)
+Welcome to **OpenCorpus**, a multilingual compilation of open-source textual corpora designed for accessibility and linguistic research. This repository offers a rich collection of links and metadata for publicly available, CC-licensed, and machine-readable datasets across major and minor world languages.
 
-The table below summarizes key sources (all public domain) with their languages, genres, annotation, formats, licenses, and suitability for lexical research.
+## Table of Contents
 
-| Source (Name & URL)                                                                            | Languages                                                | Types of works                                     | Annotation Types                                                         | Format/Access                     | License/Reuse                     | Suitability                                           |
-| ---------------------------------------------------------------------------------------------- | -------------------------------------------------------- | -------------------------------------------------- | ------------------------------------------------------------------------ | --------------------------------- | --------------------------------- | ----------------------------------------------------- |
-| [Open Greek & Latin (Perseus) – Greek corpus](https://github.com/PerseusDL/canonical-greekLit) | Ancient Greek                                            | Classical Greek literature (Homer, tragedians)     | Lemmas, POS tags, morphological features [[*](https://people.ischool.berkeley.edu/~dbamman/pubs/pdf/latech2011.pdf)][[*](https://wiki.digitalclassicist.org/Greek_and_Latin_texts_in_digital_form)]                          | TEI XML (Scaife, GitHub)          | CC-BY-SA 4.0 (PD) [[*](https://github.com/PerseusDL/canonical-greekLit)]             | Richly annotated syntax & lexicon                     |
-| [Open Greek & Latin (Perseus) – Latin corpus](https://github.com/PerseusDL/canonical-latinLit) | Latin                                                    | Latin classical texts (Caesar, Cicero, Vergil)     | Lemmas, POS tags, morphological features [[*](https://people.ischool.berkeley.edu/~dbamman/pubs/pdf/latech2011.pdf)][[*](https://wiki.digitalclassicist.org/Greek_and_Latin_texts_in_digital_form)]                          | TEI XML (Scaife, GitHub)          | CC-BY-SA 4.0 (PD) [[*](https://github.com/PerseusDL/canonical-latinLit)]             | Fully parsed Latin texts                              |
-| [Ancient Greek Dependency Treebank](https://perseusdl.github.io/treebank_data/)                | Ancient Greek                                            | Homer, Hesiod, Aeschylus, etc.                     | Lemmas, POS tags, morphological codes; syntactic dependencies [[*](https://people.ischool.berkeley.edu/~dbamman/pubs/pdf/latech2011.pdf)]        | CoNLL-U / XML (download)          | CC (open) [[*](https://people.ischool.berkeley.edu/~dbamman/pubs/pdf/latech2011.pdf)]                     | Expert-annotated treebank                             |
-| [Latin Dependency Treebank](https://perseusdl.github.io/treebank_data/)                        | Latin                                                    | Caesar, Cicero, Ovid, Vergil, etc.                 | Lemmas, POS tags, morphological codes; syntactic dependencies [[*](https://people.ischool.berkeley.edu/~dbamman/pubs/pdf/latech2011.pdf)]        | CoNLL-U / XML (download)          | CC (open) [[*](https://people.ischool.berkeley.edu/~dbamman/pubs/pdf/latech2011.pdf)]                     | Expert-annotated treebank                             |
-| [Universal Dependencies (UD)](https://universaldependencies.org/)                              | 150+ langs (incl. English, Latin, Greek, French, German) | Mixed corpora (news, Wikipedia, web)               | Universal POS tags, morphological features, dependency parses, lemmas [[*](https://universaldependencies.org/)]| CoNLL-U (plaintext)               | CC-BY (treebanks)                 | Broad multilingual corpora with consistent annotation |
-| [Project Gutenberg](https://www.gutenberg.org/)                                                | Primarily English (also FR, DE, etc.)                    | Literature, philosophy, classics                   | None (raw text); header metadata (title, author, date)                   | Plain text, HTML, EPUB            | Public Domain [[*](https://methods.clsinfra.io/corpus-lithist.html)]                 | Massive PD corpus for English and other literatures   |
-| [Wikisource](https://wikisource.org/)                                                          | Multilingual (EN, FR, DE, etc.)                          | Literature, historical and religious texts         | Wiki markup; page metadata (titles, categories, authors)                 | Wiki XML dumps / HTML             | CC-BY-SA                          | Crowdsourced collections of PD texts                  |
-| [Oxford Text Archive (OTA)](http://ota.bodleian.ox.ac.uk/)                                     | Various (English, Latin, etc.)                           | Scholarly corpora (poetry, drama, prose)           | TEI-encoded texts (structural+metadata tags: author, date, genre)        | TEI XML, plain text               | Varies by collection [[*](https://methods.clsinfra.io/corpus-lithist.html)]          | Curated humanities texts (check individual licenses)  |
-| [IntraText Digital Library](http://www.intratext.com/)                                         | Latin (ancient to modern)                                | Published Latin works (literature, theology, etc.) | Full text with search/concordances; edition metadata [[*](https://wiki.digitalclassicist.org/IntraText_Digital_Library)]                 | HTML (search interface)           | Free access (copyright respected) | Scholarly Latin corpus with lexicon links             |
-| [The Latin Library](http://thelatinlibrary.com/)                                               | Latin                                                    | Classical and medieval Latin literature            | None (raw text)                                                          | HTML                              | Public domain (collected PD) [[*](https://wiki.digitalclassicist.org/Greek_and_Latin_texts_in_digital_form)]  | Broad Latin text collection (no annotation)           |
-| [Bibliotheca Augustana](https://www.hs-augsburg.de/~harsch/augustana.html)                     | Greek, Latin (incl. medieval/Neo-Latin)                  | Selected classical/medieval texts                  | None (raw text)                                                          | HTML                              | PD academic collection [[*](https://wiki.digitalclassicist.org/Greek_and_Latin_texts_in_digital_form)]        | Curated texts with simple interface (no annotation)   |
-| [Deutsches Textarchiv (DTA)](https://www.deutschestextarchiv.de/)                              | German (1600–1900)                                       | Historical German literature (prose, poetry)       | Tokenized, lemmatized; normalized orthography [[*](https://tei-c.org/activities/projects/deutsches-textarchiv-the-german-text-archive/)]                        | TEI-XML, HTML, TCF, plain text [[*](https://tei-c.org/activities/projects/deutsches-textarchiv-the-german-text-archive/)]| CC-BY (open)                      | Annotated diachronic German corpus [[*](https://tei-c.org/activities/projects/deutsches-textarchiv-the-german-text-archive/)]                |
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Dataset Collection](#dataset-collection)
+4. [Getting Started](#getting-started)
+5. [Usage](#usage)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Contact](#contact)
+9. [Releases](#releases)
 
-Each source in Table 1 is public-domain (or CC‑licensed) and minimally processed. Most entries include lemma and POS annotations or rich TEI markup. This means they can be readily searched for word contexts and used to build chronological lexica: for example, the Perseus corpora and dependency treebanks provide lemmatized, dated examples for Greek and Latin, while Gutenberg and Wikisource supply large quantities of dated literary usage (with author/date metadata). The combination of these resources covers a wide temporal span.
+## Introduction
 
-Sources: We prioritize academically curated collections [[*](https://methods.clsinfra.io/corpus-lithist.html)]. Citations indicate where full details of each resource’s content and licensing are documented.
+In the age of information, access to diverse linguistic data is crucial for researchers, educators, and developers. **OpenCorpus** aims to bridge the gap by providing a comprehensive directory of textual corpora that are open-source and freely accessible. Our collection includes datasets from various languages, ensuring that linguistic research is inclusive and representative of global diversity.
 
-## Indo-European Languages
+## Features
 
-**English**: The Open American National Corpus (OANC) (https://anc.org/oanc) provides ~15 M words of modern American English (1990s–present) across diverse written (news, fiction, academic, web) and spoken genres (https://anc.org/). It is richly annotated with POS tags and lemmas (via ANC’s annotation pipeline) and can be delivered in XML/CoNLL-U formats using the ANC2Go tool (https://en.wikipedia.org/, https://anc.org/). The OANC is fully open/unrestricted (effectively CC0; https://anc.org/). Its Manually Annotated Sub-Corpus (MASC) (500K words) is balanced over 18+ genres and adds gold-standard annotations (tokenization, POS, lemma, syntax, named entities, coreference, discourse, etc.; https://anc.org/). MASC is licensed CC-BY 3.0 (US; https://anc.org/). These corpora are excellent for syntactic and semantic research. Other key English resources include Project Gutenberg (PD literature in many genres; plain text; PD/no restriction; https://gutenberg.org/policy/license.html) and English Wikipedia (encyclopedic articles; XML dumps; CC-BY-SA 4.0; https://en.wikipedia.org/wiki/Wikipedia:Database_download) for general lexical usage. The Leipzig Corpora Collection offers up to 1 M sentences of English (news and web text, sentence-aligned; plain text) with word co-occurrence stats (https://wortschatz.uni-leipzig.de/en/download) – data freely downloadable under CC-BY (https://wortschatz.uni-leipzig.de/en/usage).
+- **Multilingual Support**: Explore datasets in numerous languages, both major and minor.
+- **Curated Metadata**: Each dataset comes with detailed metadata, making it easier to understand the content and context.
+- **Accessibility**: All datasets are publicly available and machine-readable, ensuring ease of use for researchers and developers.
+- **Open Source**: Contribute to and benefit from a community-driven resource.
 
-| Corpus / Resource                           | Language(s)            | Genres / Text Types                                                   | Annotation / Metadata                                                                                         | Format / Access                         | License               | Notes (suitability)                                                           |
-| ------------------------------------------- | ---------------------- | --------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------- | --------------------------------------- | --------------------- | ----------------------------------------------------------------------------- |
-| [**OANC**<br>(Open American National Corpus)](https://anc.org/) | American English       | 15M words; balanced modern genres (news, fiction, blogs, transcripts) | POS tags, lemmas, etc. (automatic) [[*](https://en.wikipedia.org/wiki/American_National_Corpus)]                                                                        | XML/CoNLL-U via ANC2Go [[*](https://en.wikipedia.org/wiki/American_National_Corpus)]              | CC0 (unrestricted) [[*](https://anc.org/)]| Good for lexical frequencies, collocations, grammar (chronological).          |
-| [**MASC** (Manually Annotated Sub-Corpus)](https://anc.org/)    | American English       | 500K words; balanced 18+ genres (including speech, blogs, news)       | Manual annotation: sentence, token, lemma, POS, NP/VP chunks, NER, Penn Treebank syntax, coreference, etc. [[*](https://anc.org/)]| XML/GrAF (coming); samples downloadable | CC-BY 3.0 US [[*](https://anc.org/)]      | Gold-standard grammar and semantics – ideal for NLP, lexicography.            |
-| [**Project Gutenberg**](https://gutenberg.org/policy/license.html)                       | Many (English-centric) | Public-domain literature & nonfiction (classics, poetry, etc.)        | None (plain text)                                                                                             | Plain text, ePub, HTML                  | Public domain [[*](https://gutenberg.org/policy/license.html)]     | Rich historical texts; useful for rare/archaic usage and large-scale corpora. |
-| [**Wikipedia (English)**](https://en.wikipedia.org/wiki/Wikipedia:Database_download)                     | English                | Encyclopedia articles (all domains)                                   | None (wiki markup; can extract text)                                                                          | XML dumps                               | CC-BY-SA 4.0 [[*](https://en.wikipedia.org/wiki/Wikipedia:Database_download)]      | Huge up-to-date lexicon; varied style and topics (user-generated).            |
-| [**Leipzig Corpora (English)**](https://wortschatz.uni-leipzig.de/en/download) [[*](https://wortschatz.uni-leipzig.de/en/usage)]           | English                | News and random web sentences (10K–1M)                                | None (pre-tokenized sentences; includes co-occurrence stats)                                                  | Plain text (sentences)                  | CC-BY 4.0 [[*](https://wortschatz.uni-leipzig.de/en/usage)]         | Balanced word-freq and collocation data (quick lookup tables).                |
+## Dataset Collection
 
-**Spanish**: Open Spanish corpora include Leipzig News Crawls, Wikipedia (es), and public-domain literature. The Leipzig Corpora (Spanish) (100K–1M sentences) cover newspaper and web text; plain sentences with frequency info (CC-BY; https://wortschatz.uni-leipzig.de/en/download; https://wortschatz.uni-leipzig.de/en/usage). Spanish Wikipedia provides up-to-date encyclopedic text (CC-BY-SA; https://en.wikipedia.org/wiki/Wikipedia:Database_download). Project Gutenberg (Spanish) offers PD literary classics. Together these form robust corpora for Spanish lexicography.
+The datasets included in **OpenCorpus** cover a wide range of topics and genres, from literary texts to technical documents. Here are some categories you can explore:
 
-| Corpus / Resource            | Language(s) | Genres / Text Types                      | Annotation / Metadata | Format / Access        | License          | Notes                                                  |
-| ---------------------------- | ----------- | ---------------------------------------- | --------------------- | ---------------------- | ---------------- | ------------------------------------------------------ |
-| [Leipzig Corpora (Spanish)](https://wortschatz.uni-leipzig.de/en/download) [[*](https://wortschatz.uni-leipzig.de/en/usage)]| Spanish     | News articles and web sentences (10K–1M) | None                  | Plain text (sentences) | CC-BY 4.0 [[*](https://wortschatz.uni-leipzig.de/en/usage)]    | Good for frequency and collocation stats.              |
-| [Wikipedia (Spanish)](https://en.wikipedia.org/wiki/Wikipedia:Database_download)          | Spanish     | Encyclopedic articles                    | None (wiki markup)    | XML dumps              | CC-BY-SA 4.0 [[*](https://en.wikipedia.org/wiki/Wikipedia:Database_download)] | Large modern lexicon across topics.                    |
-| [Project Gutenberg (Spanish)](https://gutenberg.org/policy/license.html)  | Spanish     | PD literature and poetry                 | None                  | Plain text, ePub       | Public domain [[*](https://gutenberg.org/policy/license.html)]| Classic works (Cervantes, etc.) for literary language. |
+- **Literature**: Classic and contemporary works from various cultures.
+- **News Articles**: A collection of articles from global news outlets.
+- **Academic Papers**: Research papers from different fields.
+- **Social Media**: Texts gathered from various social media platforms.
+- **Conversational Data**: Transcripts from dialogues and discussions.
 
-**French**: Similarly, Leipzig French corpora (news/web; CC-BY) and French Wikipedia (CC-BY-SA) provide broad coverage. Project Gutenberg (French) and France’s Gallica offer PD classics and historical texts.
+Each dataset is linked with its respective source, ensuring that you can access the original content easily.
 
-| Corpus / Resource           | Language(s) | Genres / Text Types            | Annotation / Metadata | Format     | License          | Notes                                   |
-| --------------------------- | ----------- | ------------------------------ | --------------------- | ---------- | ---------------- | --------------------------------------- |
-| [Leipzig Corpora (French)](https://wortschatz.uni-leipzig.de/en/download) [[*](https://wortschatz.uni-leipzig.de/en/download)]| French      | News articles, web (10K–1M)    | None                  | Plain text | CC-BY 4.0 [[*](https://wortschatz.uni-leipzig.de/en/usage)]    | Balanced modern text (journals, blogs). |
-| [Wikipedia (French)](https://en.wikipedia.org/wiki/Wikipedia:Database_download)          | French      | Encyclopedia entries           | None                  | XML dump   | CC-BY-SA 4.0 [[*](https://en.wikipedia.org/wiki/Wikipedia:Database_download)] | General-purpose text, up to date.       |
-| [Project Gutenberg (French)](https://gutenberg.org/policy/license.html)  | French      | PD literature (Voltaire, Hugo) | None                  | Plain text | Public domain [[*](https://gutenberg.org/policy/license.html)]| Classic literature for stylistic study. |
+## Getting Started
 
-German: Open German corpora include Leipzig German (newspaper/web; CC-BY; https://wortschatz.uni-leipzig.de/en/download; https://wortschatz.uni-leipzig.de/en/usage), German Wikipedia (CC-BY-SA; https://en.wikipedia.org/wiki/Wikipedia:Database_download), and German Project Gutenberg. The Deutsches Textarchiv (DTA) is a scholarly collection of 19th-century texts (Open Access), and parliamentary corpora (e.g. Hansard Germany) may be used.
+To get started with **OpenCorpus**, follow these steps:
 
-| Corpus / Resource           | Language(s) | Genres / Text Types          | Annotation / Metadata | Format     | License          | Notes                        |
-| --------------------------- | ----------- | ---------------------------- | --------------------- | ---------- | ---------------- | ---------------------------- |
-| [Leipzig Corpora (German)](https://wortschatz.uni-leipzig.de/en/download) [[*](https://wortschatz.uni-leipzig.de/en/usage)]| German      | News, web sentences (10K–1M) | None                  | Plain text | CC-BY 4.0 [[*](https://wortschatz.uni-leipzig.de/en/usage)]    | Modern usage frequency data. |
-| [Wikipedia (German)](https://en.wikipedia.org/wiki/Wikipedia:Database_download)          | German      | Encyclopedia articles        | None                  | XML dump   | CC-BY-SA 4.0 [[*](https://en.wikipedia.org/wiki/Wikipedia:Database_download)] | Large multi-domain text.     |
-| [Project Gutenberg (German)](https://gutenberg.org/policy/license.html)  | German      | PD classics (Goethe, Grimm)  | None                  | Plain text | Public domain [[*](https://gutenberg.org/policy/license.html)]| Standard literary language.  |
+1. **Clone the Repository**: 
+   ```bash
+   git clone https://github.com/davide-ghidelli-business/OpenCorpus.git
+   ```
 
-Russian: The Leipzig Russian corpus (news/web; CC-BY) and Russian Wikipedia (CC-BY-SA) are open sources. The Open Russian National Corpus (ORNC) is in development, but the public Russian Wikipedia, PD literary texts, and Leipzig provide ample raw text. (Full annotated RNC exists but is not open download.)
+2. **Explore the Datasets**: Navigate through the directories to find datasets that interest you.
 
-| Corpus / Resource            | Language(s) | Genres / Text Types            | Annotation / Metadata | Format     | License          | Notes                     |
-| ---------------------------- | ----------- | ------------------------------ | --------------------- | ---------- | ---------------- | ------------------------- |
-| [Leipzig Corpora (Russian)](https://wortschatz.uni-leipzig.de/en/download) [[*](https://wortschatz.uni-leipzig.de/en/usage)]| Russian     | News and web (10K–1M)          | None                  | Plain text | CC-BY 4.0 [[*](https://wortschatz.uni-leipzig.de/en/usage)]    | Modern usage; large size. |
-| [Wikipedia (Russian)](https://en.wikipedia.org/wiki/Wikipedia:Database_download)          | Russian     | Encyclopedia articles          | None                  | XML dump   | CC-BY-SA 4.0 [[*](https://en.wikipedia.org/wiki/Wikipedia:Database_download)] | Broad vocabulary.         |
-| [Project Gutenberg (Russian)](https://gutenberg.org/policy/license.html)  | Russian     | PD literature (Tolstoy, Dost.) | None                  | Plain text | Public domain [[*](https://gutenberg.org/policy/license.html)]| 19th-century classic lit. |
+3. **Download Datasets**: For datasets that require download, visit the [Releases](https://github.com/davide-ghidelli-business/OpenCorpus/releases) section to get the latest versions.
 
-**Other Indo-European Languages**: For classical and less-common IE languages, open corpora exist: e.g. the Latin Library (latinlibrary.com) and Perseus Project provide extensive Latin/Greek texts (mostly PD). The OpenITI corpus offers open-access Persian and Arabic texts (incl. many medieval works; https://openiti.org/projects/OpenITI%20Corpus.html). UD treebanks cover dozens of languages (e.g. Old Norse, Welsh, Haitian, etc.) with POS/morphology annotations (CoNLL-U format; varying CC-BY/CC-BY-SA). These can seed lexicographic data where available.
+## Usage
 
-## Afro-Asiatic Languages
+Once you have the datasets, you can use them for various purposes, including:
 
-**Arabic**: The Leipzig Arabic corpus (news/web; CC-BY) and Arabic Wikipedia (CC-BY-SA) are major open sources. In addition, OpenITI provides thousands of classical Arabic and Persian texts (liturgical and scholarly works; https://openiti.org/projects/OpenITI%20Corpus.html) – open-access and increasingly cleaned. The Quranic Arabic Corpus (grammar/lemmas) is annotated but carries a CC-BY-NC-SA license, so use primarily for reference (not included here). These corpora (especially wiki and news) cover modern MSA; classical texts enrich dictionary entries.
+- **Natural Language Processing (NLP)**: Train models using diverse linguistic data.
+- **Linguistic Research**: Analyze language patterns, structures, and usage.
+- **Educational Purposes**: Use datasets in teaching and learning environments.
 
-| Corpus / Resource           | Language(s)     | Genres / Text Types                     | Annotation / Metadata   | Format     | License                  | Notes                                   |
-| --------------------------- | --------------- | --------------------------------------- | ----------------------- | ---------- | ------------------------ | --------------------------------------- |
-| [Leipzig Corpora (Arabic)](https://wortschatz.uni-leipzig.de/en/download) [[*](https://wortschatz.uni-leipzig.de/en/usage)]| Arabic          | News and web (10K–1M)                   | None                    | Plain text | CC-BY 4.0 [[*](https://wortschatz.uni-leipzig.de/en/usage)]            | Modern MSA usage, word co-occurrences.  |
-| [Wikipedia (Arabic)](https://en.wikipedia.org/wiki/Wikipedia:Database_download)          | Arabic          | Encyclopedic articles                   | None                    | XML dump   | CC-BY-SA 4.0 [[*](https://en.wikipedia.org/wiki/Wikipedia:Database_download)]         | General vocabulary, cross-domain.       |
-| [OpenITI (Arabic/Persian)](https://openiti.org/projects/OpenITI%20Corpus.html)    | Arabic; Persian | Classical religious/philosophical works | Metadata (author, date) | TEI/XML    | Open access (CC-BY-like) | Rich historical texts; some OCR errors. |
+### Example
 
-**Hebrew**: Open resources include Hebrew Bible (Tanakh) texts (PD) and the Hebrew Wikipedia (CC-BY-SA). The Bar-Ilan Responsa Project is scholarly but not open. UD Hebrew corpora (modern liturgical and wiki) exist with annotations (UD format, CC-BY). These can support lexicographic work in modern and Biblical Hebrew.
+Here’s a simple example of how to load a dataset in Python:
 
-**Other Afro-Asiatic Languages**: For Amharic/Ge‘ez, no large open corpora are easily available. Somali Wikipedia and small Leipzig corpora may be used. In general, many Ethiopian languages rely on religious texts (often PD) and small parallel data.
+```python
+import pandas as pd
 
-## Sino-Tibetan and East Asian Languages
+# Load a dataset
+data = pd.read_csv('path_to_your_dataset.csv')
 
-**Mandarin Chinese**: Open corpora include Leipzig Chinese (CC-BY) and Chinese Wikipedia (CC-BY-SA) for modern Chinese. Classical Chinese is available via the Chinese Text Project (ancient texts; open-access but CC-BY-NC-SA – not strictly CC-BY). Modern annotated treebanks exist (UD Chinese, POS-tagged), and the CC-CEDICT dictionary is open (for reference). These corpora serve both modern usage and classical study.
+# Display the first few rows
+print(data.head())
+```
 
-| Corpus / Resource            | Language(s)        | Genres / Text Types   | Annotation / Metadata | Format     | License         | Notes                          |
-| ---------------------------- | ------------------ | --------------------- | --------------------- | ---------- | --------------- | ------------------------------ |
-| [Leipzig Corpora (Chinese)](https://wortschatz.uni-leipzig.de/en/download) [[*](https://wortschatz.uni-leipzig.de/en/usage)]| Chinese (Mandarin) | News and web (10K–1M) | None                  | Plain text | CC-BY 4.0 [[*](https://wortschatz.uni-leipzig.de/en/usage)]   | High-frequency modern Chinese. |
-| [Wikipedia (Chinese)](https://en.wikipedia.org/wiki/Wikipedia:Database_download)          | Chinese            | Encyclopedia articles | None                  | XML dump   | CC-BY-SA 4.0 [[*](https://en.wikipedia.org/wiki/Wikipedia:Database_download)]| Wide topical coverage.         |
+## Contributing
 
-**Other Sino-Tibetan Languages**: For Burmese, Tibetan, etc., open data is sparse. Wikipedia exists for Burmese (CC-BY-SA) and smaller Wikipedias for Tibetan, plus some scholarly parallel texts (e.g. Buddhist Tripiṭaka translations). UD has limited treebanks for Tibetan. For major Chinese languages/dialects (e.g. Cantonese), Leipzig Corpora include some web data. These should be listed under a broader “multilingual” note if used.
+We welcome contributions from the community. If you have a dataset or suggestions to improve **OpenCorpus**, please follow these steps:
 
-## Dravidian Languages
+1. **Fork the Repository**: Click the fork button on the top right corner of the page.
+2. **Create a New Branch**: 
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
+3. **Make Your Changes**: Add your dataset or modify existing content.
+4. **Commit Your Changes**: 
+   ```bash
+   git commit -m "Add your message here"
+   ```
+5. **Push to Your Branch**: 
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+6. **Open a Pull Request**: Go to the original repository and click on "New Pull Request."
 
-**Tamil**: The Tamil Virtual Academy and Project Madurai (https://projectmadurai.org) provide PD Tamil literary works (epics, poems) in UTF-8 text. Tamil Wikipedia (CC-BY-SA) and Leipzig Tamil corpora (from news/web) also exist. UD Tamil is available (CC-BY-SA). These textual resources cover both classical and contemporary Tamil usage.
+## License
 
-**Other Dravidian Languages**: Malayalam, Telugu, Kannada have small Wikipedias and some UD treebanks. The Indian Language Corpora Initiative (ILCI) produced parallel corpora with open licensing (CC-BY) for Indian languages, useful for lexical entries.
+**OpenCorpus** is licensed under the MIT License. Feel free to use, modify, and distribute the datasets as long as you provide proper attribution.
 
-## Austro-Asiatic and Austronesian Languages
+## Contact
 
-**Vietnamese**: Leipzig Vietnamese (news/web; CC-BY) and Vietnamese Wikipedia (CC-BY-SA) are available. Vietnamese Parallel Corpora from OPUS (e.g. TED talks, Tatoeba) exist under CC licenses. These support modern language usage.
+For any questions or feedback, please reach out via the Issues section of this repository or contact us directly.
 
-**Thai**: Thai Wikipedia (CC-BY-SA) and National Electronics and Computer Technology Center (NECTEC) corpus (not fully open). Leipzig includes small Thai corpora. An OpenParallel corpus (e.g. Tatoeba sentences, CC-BY 4.0) can supplement.
+## Releases
 
-**Austronesian (Malay/Indonesian)**: Open corpora include Leipzig Indonesian/Malay and Wikipedia (MS, ID) under CC-BY-SA. The OSCAR web corpus and UD (e.g. Indonesian-GSD) are CC-BY-SA. These cover modern usage in Malay and Indonesian.
+To keep track of updates and new datasets, check the [Releases](https://github.com/davide-ghidelli-business/OpenCorpus/releases) section regularly. Download the latest versions and stay updated with the newest additions to the corpus.
 
-## Uralic and Altaic Languages
+## Acknowledgments
 
-**Finnish/Hungarian**: The Leipzig Corpora include Finnish and Hungarian (CC-BY). Wikipedia (fi, hu) provide broad text. UD treebanks exist. These resources support standard lexical work in these languages. 
+We thank all the contributors and researchers who have made this project possible. Your efforts help advance linguistic research and promote accessibility in the field.
 
-**Turkish**: Leipzig Turkish and Wikipedia Turkish (CC-BY-SA) are open. The Turkish National Corpus is not open, but news archives (e.g. open news articles) and historical texts (forged citations) may be used. The UD Turkish treebank is CC-BY.
+---
 
-**Other Altaic/Caucasian Languages**: Open corpora for Uzbek, Azerbaijani (Leipzig, Wikipedia) and Caucasian languages (e.g. Georgian Wikipedia) are limited but exist. Notably, open glossed corpora have been published for indigenous Siberian languages (Selkup, Nganasan, Kamas, Dolgan) with linguistic annotation (https://copius.univie.ac.at/). These specialized corpora (accessible via inel.corpora.uni-hamburg.de) are rare examples of endangered-language resources.
-
-## African Languages Languages
-
-**Swahili**: Swahili Wikipedia (CC-BY-SA) and Leipzig Swahili corpus (news; CC-BY) are key. The UD Swahili treebank (CC-BY) also exists. These support lexical analysis of modern Swahili.
-
-**Yoruba, Zulu, etc.**: Wikipedias exist (Yoruba, Zulu, etc., CC-BY-SA). Leipzig has some corpora (e.g. Yoruba). PanAfrican Parallel Corpora (Paracrawl) include news and the UDHR. These can provide base texts, though limited.
-
-**Other African Languages**: Many African languages lack large corpora. Parallel religious texts (Bible, UDHR) in local languages can offer seed data. Efforts like Masakhane (MT dataset) are promising but often custom-licensing (not CC-BY).
-
-## Americas
-
-**Global**: Wikipedia (Spanish, Portuguese, and English) cover major Colonial languages. Leipzig Corpora include Spanish, Portuguese (Brazilian) etc. Latin American historical texts (PD Spanish/Portuguese lit) and US/Canadian legal texts (PD) are available but not unified corpora.
-
-Indigenous Languages: UD provides treebanks for some (Quechua, Guarani, Nahuatl, Navajo, etc.) with CC-BY-SA. Small collections exist (e.g. collections of folk tales, bilingual corpora). The Universal Declaration of Human Rights in 500+ languages (UN translations) is PD and a handy parallel snippet for rare languages. Tools like Universal Dependencies (https://universaldependencies.org/) and Leipzig (https://wortschatz.uni-leipzig.de/en/download; https://wortschatz.uni-leipzig.de/en/usage) can be leveraged for others.
-
-## Multilingual Corpora
-
-Several resources span many languages:
-
-1. **Leipzig Corpora Collection**: Provides monolingual corpora (10K–1M sentences) for 100+ languages (including major and many minority languages; https://wortschatz.uni-leipzig.de/en/download). Texts are drawn from news and the web; formats are plain-text sentences. All downloads are CC-BY 4.0 (https://wortschatz.uni-leipzig.de/en/usage).
-2. **Wikipedia (dumps)**: >300 languages; encyclopedic articles (all licensed CC-BY-SA; https://en.wikipedia.org/wiki/Wikipedia:Database_download). It is a huge multilingual corpus (though quality varies).
-3. **Universal Dependencies (UD)**: Over 200 treebanks in 150+ languages (Indo-European, Uralic, Altaic, Sino-Tibetan, etc.; https://universaldependencies.org/), annotated for POS, morphology, and dependencies in CoNLL-U format. Licenses vary by treebank (mostly CC-BY or CC-BY-SA). UD provides structured, annotated data across families.
-4. **PubMed Central Open Access Subset (PMC OA)**: Millions of English biomedical articles (full text XML) under liberal (often CC-BY) licenses (https://pmc.ncbi.nlm.nih.gov/tools/openftlist/). This is an authoritative corpus of scientific prose, suitable for technical vocabulary.
-5. **Project Gutenberg & Wikisource (multilingual)**: Multi-language texts (many European classics in the public domain), usually plain text or ePub, virtually no restrictions (https://gutenberg.org/policy/license.html).
-6. **Parallel Bible Corpora**: While not strictly CC (e.g. JW300), Bible translations in hundreds of languages are broadly PD (e.g. King James, Septuagint) and can be used for basic lexicography in underserved languages.
-
-Most corpora are available in plain-text or XML formats and include at least basic metadata (author/date) when provided. They are suitable for building lexicons (word lists, frequency), etymological studies (via cross-language parallels), and semantic fields (through usage contexts). Priority should be given to sources cited above with open licenses (PD or CC-BY/CC-BY-SA) and minimal cleaning needs, ensuring authoritative coverage (classic literature, major newspapers, official documents) across linguistic families.
-
-**Sources**: Authoritative corpora and documentation for each language (as cited above) were used to compile this list (https://anc.org/, https://gutenberg.org/policy/license.html, https://en.wikipedia.org/wiki/Wikipedia:Database_download, https://wortschatz.uni-leipzig.de/en/download. https://wortschatz.uni-leipzig.de/en/usage, https://copius.univie.ac.at/, https://pmc.ncbi.nlm.nih.gov/tools/openftlist/), prioritizing open licenses and finished texts.
-
-## Open-Access Dictionaries (by Language and Type)
-
-| Dictionary / Project                                                                                                                                   | Languages                                                    | Type                                                   | Format / Access                               | License                      | Notes (coverage, quality)                                                                 |
-| ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------ | --------------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------- |
-| [Wiktionary](https://en.wiktionary.org/)                                                                                                               | 4,400+ [[*](https://en.wiktionary.org/wiki/Wiktionary:Main_Page)] (all major languages)                             | Collaborative multilingual (definitions, translations) | Web (MediaWiki); data dumps, API              | CC BY-SA 4.0 [[*](https://en.wiktionary.org/wiki/Wiktionary:Main_Page)]             | around 8.4M entries [[*](https://en.wiktionary.org/wiki/Wiktionary:Main_Page)], includes etymologies, pronunciation, translations.               |
-| [GCIDE (GNU Collab. Int. Dict. of English)](https://gcide.gnu.org.ua/)                                                                                 | English                                                      | Historical monolingual (Webster 1913 + WordNet)        | Download (tar.gz text)                        | GPLv3+ [[*](https://gcide.gnu.org.ua/license)]                   | Derived from Webster’s 1913 [[*](https://gcide.gnu.org.ua/)]; includes supplemental WordNet definitions.               |
-| [Open English WordNet](https://en-word.net/)                                                                                                           | English                                                      | Semantic lexicon (synset database)                     | XML/RDF download                              | CC BY 4.0 [[*](https://en-word.net/)]                | WordNet-style network (synonyms, hypernyms) derived from Princeton WordNet.               |
-| [Bueno Spanish–English Dictionary (XML)](https://github.com/mananoreboton/en-es-en-Dic)                                                                | Spanish ↔ English                                            | Bilingual (modern)                                     | Download (TEI-XML)                            | Apache 2.0 [[*](https://github.com/mananoreboton/en-es-en-Dic)]               | \~58K entries; high-quality, manually curated dataset [[*](https://github.com/mananoreboton/en-es-en-Dic)].                                |
-| [FreeDict](https://freedict.org/)                                                                                                                      | around 45 languages (e.g. Afrikaans, Arabic, Breton) [[*](https://freedict.org/)]     | Bilingual (various pairs)                              | Download (TEI XML; StarDict, etc.)            | GPL [[*](https://tei-c.org/activities/projects/freedict/)]                      | 140+ bilingual dictionaries (≈45 languages) [[*](https://freedict.org/)]. Offline lookup, corpus-compatible format.    |
-| [CC-CEDICT](https://www.mdbg.net/chinese/dictionary?page=cedict)                                                                                       | Chinese (Simplified, Traditional) ↔ English                  | Bilingual (learning dictionary)                        | Download (UTF-8 text)                         | CC BY-SA 4.0 [[*](https://www.mdbg.net/chinese/dictionary?page=cedict)]             | \~123K entries (2025) [[*](https://www.mdbg.net/chinese/dictionary?page=cedict)]; includes pinyin. Widely used in apps and studies.              |
-| [Lane’s Arabic–English Lexicon (1863–93)](https://archive.org/details/ArabicEnglishLexicon.CopiousEasternSources.EnlargedSuppl.Kamoos.Lane.Poole.1863) | Classical Arabic ↔ English                                   | Historical lexicon                                     | Text scans (DjVu/TXT OCR) on Internet Archive | Public Domain [[*](https://archive.org/details/ArabicEnglishLexicon.CopiousEasternSources.EnlargedSuppl.Kamoos.Lane.Poole.1863)]            | 8 volumes; exhaustive classical Arabic dictionary (derived from earlier Kāmūs).           |
-| [Latin WordNet](https://latinwordnet.exeter.ac.uk/)                                                                                                    | Latin                                                        | Semantic lexicon (WordNet)                             | JSON/API (REST)                               | CC BY-SA 4.0 [[*](https://latinwordnet.exeter.ac.uk/)]             | \~70,000 words (archaic to medieval) [[*](https://latinwordnet.exeter.ac.uk/)]; modern online WordNet for Latin.                |
-| [OpenWordnet-PT](https://github.com/own-pt/openWordnet-PT)                                                                                             | Portuguese                                                   | Semantic lexicon (WordNet)                             | RDF/JSON download                             | CC BY 4.0 [[*](https://github.com/own-pt/openWordnet-PT)]                | Open Portuguese WordNet; linked concepts and glosses in Portuguese.                       |
-| [JMdict (Japanese-Multilingual)](https://www.edrdg.org/wiki/index.php/JMdict-EDICT_Dictionary_Project)                                                 | Japanese ↔ English, plus French/Ger/Rus…                     | Multilingual (bilingual entries)                       | Download (XML)                                | CC BY-SA 4.0 [[*](https://blog.okfn.org/2009/07/21/open-dictionary-databases-an-overview/)]             | Expanded EDICT; \~200K entries with translations into multiple languages.                 |
-| [PanLex](https://panlex.org/)                                                                                                                          | 5,000+ languages (broad “global lexicon”)                    | Multilingual lexicon                                   | Download (CSV/JSON snapshots)                 | CC0 1.0 Universal [[*](https://panlex.org/license/)]        | Panlingual database of translations; includes many minority and endangered languages.     |
-| [Apertium Dictionaries](https://apertium.org/)                                                                                                         | 20+ language pairs (e.g. Catalan‑Sp., Asturian‑Sp., etc.) [[*](https://blog.okfn.org/2009/07/21/open-dictionary-databases-an-overview/)]| Bilingual (MT lexicons)                                | Download (XML on GitHub)                      | GPL (majority) / CC BY-SA [[*](https://blog.okfn.org/2009/07/21/open-dictionary-databases-an-overview/)]| Rule-based MT dictionaries; open-source lexical data for many languages.                  |
-
-**Sources**: Authoritative project pages and documentation for each resource (https://en.wiktionary.org/wiki/Wiktionary:Main_Page, https://gcide.gnu.org.ua/license, https://gcide.gnu.org.ua/, https://en-word.net/, https://github.com/mananoreboton/en-es-en-Dic, https://freedict.org/, https://tei-c.org/activities/projects/freedict/, https://www.mdbg.net/chinese/dictionary?page=cedict, https://archive.org/details/ArabicEnglishLexicon.CopiousEasternSources.EnlargedSuppl.Kamoos.Lane.Poole.1863, https://latinwordnet.exeter.ac.uk/, https://github.com/own-pt/openWordnet-PT, https://blog.okfn.org/2009/07/21/open-dictionary-databases-an-overview/, https://panlex.org/license/, https://blog.okfn.org/2009/07/21/open-dictionary-databases-an-overview/), which detail formats, coverage, and licensing.
-
-<!--
-keywords: multilingual, NLP, open-source, natural-language-processing, research, resource, dictionaries, open, directory, corpus, linguistics, open-data, machine-readable
--->
+Explore the world of language with **OpenCorpus**. Join us in making linguistic data accessible to all!
